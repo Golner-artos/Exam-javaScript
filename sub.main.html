@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Учет трат</title>
+</head>
+<body>
+<div class="wrap">
+  <h1>Учет трат</h1>
+ 
+  <div class="card">
+    <form id="expenseForm">
+      <input type="text" name="name" placeholder="Название траты" required>
+      <input type="number" name="amount" placeholder="Сумма" min="0.01" step="0.01" required>
+      <select name="category" required>
+        <option value="Еда">Еда</option>
+        <option value="Транспорт">Транспорт</option>
+        <option value="Развлечения">Развлечения</option>
+        <option value="Комунальные">Комунальные</option>
+        <option value="Прочее">Прочее</option>
+      </select>
+      <input type="date" name="date" required>
+      <button type="submit" class="btn-primary">Добавить трату</button>
+    </form>
+  </div>
+ 
+  <div class="toolbar">
+    <select id="categoryFilter">
+      <option value="all">Все категории</option>
+    </select>
+    <span class="total" id="totalAmount">Вместе: 0.00</span>
+  </div>
+ 
+  <ul id="expenseList"></ul>
+  <div class="empty" id="emptyMsg" style="display:none;">Трат нет</div>
+</div>
+ 
+<script src="main1.js"></script>
+</body>
+</html>
